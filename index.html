@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illovo Plumbers | 24/7 Emergency Plumbing in Johannesburg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1a1a1a; background: #ffffff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Demo Notice */
+        .demo-notice { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px; text-align: center; font-size: 0.9rem; font-weight: 500; }
+        .demo-notice a { color: #fbbf24; font-weight: 600; text-decoration: none; border-bottom: 2px solid #fbbf24; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%); color: white; padding: 120px 0 100px; text-align: center; position: relative; overflow: hidden; }
+        header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('images/pexels-ar-abnoy-536397811-16509869.jpg') center/cover; opacity: 0.3; }
+        header .container { position: relative; z-index: 1; }
+        header h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        header p { font-size: 1.4rem; opacity: 0.95; font-weight: 300; }
+        
+        /* CTA Buttons */
+        .cta-container { margin-top: 50px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .cta-btn { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 20px 48px; 
+                    text-decoration: none; border-radius: 16px; font-weight: 700; font-size: 1.3rem;
+                    transition: all 0.3s ease; box-shadow: 0 6px 24px rgba(245, 158, 11, 0.5); border: 3px solid rgba(255,255,255,0.2); }
+        .cta-btn:hover { transform: translateY(-3px) scale(1.02); }
+        .cta-phone { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); box-shadow: 0 6px 24px rgba(34, 197, 94, 0.5); }
+        .cta-whatsapp { background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5); }
+        
+        /* Trust Signals */
+        .trust-signals { display: flex; gap: 30px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 8px; font-size: 1rem; opacity: 0.9; }
+        
+        /* Services */
+        .services { padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 700; color: #0f766e; margin-bottom: 12px; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+        .service-card { background: white; padding: 40px; border-radius: 20px; text-align: center; 
+                        box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s ease; border: 1px solid #e5e7eb; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .service-icon { font-size: 4rem; margin-bottom: 20px; }
+        .service-card h3 { color: #0f766e; font-size: 1.4rem; font-weight: 600; margin-bottom: 12px; }
+        .service-card p { color: #64748b; font-size: 1.05rem; line-height: 1.6; }
+        
+        /* About */
+        .about { padding: 100px 0; }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about h2 { color: #0f766e; font-size: 2.5rem; font-weight: 700; margin-bottom: 24px; }
+        .about p { color: #475569; font-size: 1.15rem; margin-bottom: 20px; }
+        .checklist { margin-top: 32px; }
+        .checklist-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: #334155; font-size: 1.1rem; }
+        .checklist-item::before { content: '✓'; display: inline-flex; align-items: center; justify-content: center; 
+                                    width: 28px; height: 28px; background: #0f766e; color: white; border-radius: 50%; font-weight: bold; font-size: 0.9rem; }
+        .quote-box { background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%); color: white; padding: 50px; border-radius: 24px; box-shadow: 0 8px 30px rgba(15, 118, 110, 0.3); }
+        .quote-box h3 { font-size: 1.6rem; font-weight: 600; margin-bottom: 16px; }
+        .quote-box a { display: inline-block; font-size: 2rem; color: #fbbf24; font-weight: 700; text-decoration: none; }
+        
+        /* Testimonials */
+        .testimonials { padding: 100px 0; background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%); color: white; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; }
+        .testimonial { background: rgba(255,255,255,0.12); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); }
+        
+        /* Contact */
+        .contact { padding: 100px 0; text-align: center; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); }
+        .contact h2 { color: #0f766e; font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; }
+        .contact-info { font-size: 1.2rem; margin-bottom: 32px; }
+        .contact-info p { margin: 12px 0; color: #475569; }
+        .contact-info strong { color: #0f766e; }
+        .contact-info a { color: #0f766e; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+        
+        /* Footer */
+        footer { background: #0f172a; color: white; padding: 50px 0 30px; text-align: center; }
+        footer p { opacity: 0.7; font-size: 0.95rem; }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .service-grid { grid-template-columns: 1fr; }
+            .cta-container { flex-direction: column; }
+            .cta-btn { width: 100%; justify-content: center; }
+            .trust-signals { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Demo Notice -->
+    <div class="demo-notice">
+        This is a <strong>FREE DEMO WEBSITE</strong> for Illovo Plumbers. To activate your professional website, 
+        contact <a href="tel:+27 12 345 6789">ON-SET Digital</a>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Illovo Plumbers</h1>
+            <p>24/7 Emergency Plumbing in Johannesburg</p>
+            
+            <!-- Trust Signals -->
+            <div class="trust-signals">
+                <div class="trust-item">⭐⭐⭐⭐⭐ 5-Star Rated</div>
+                <div class="trust-item">✓ Fully Insured</div>
+                <div class="trust-item">⚡ Same Day Service</div>
+                <div class="trust-item">📍 Illovo, Johannesburg</div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="tel:063 559 5343" class="cta-btn cta-phone">📞 063 559 5343</a>
+                <a href="https://wa.me/27635595343" class="cta-btn cta-whatsapp">💬 WhatsApp</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Professional solutions for all your needs</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Emergency Plumbing</h3>
+                    <p>24/7 urgent plumbing repairs and burst pipes</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Geyser Installation</h3>
+                    <p>Install & repair solar and electric geysers</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚿</div>
+                    <h3>Bathroom Renovations</h3>
+                    <p>Complete bathroom fitting and renovations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>Why Choose Us?</h2>
+                    <p>We are a trusted local plumbers serving Illovo, Johannesburg and surrounding areas. 
+                    With years of experience, we deliver quality workmanship on every project.</p>
+                    <div class="checklist">
+                        <div class="checklist-item">Fully qualified and insured</div>
+                        <div class="checklist-item">Competitive local rates</div>
+                        <div class="checklist-item">Reliable and punctual service</div>
+                        <div class="checklist-item">Satisfaction guaranteed</div>
+                    </div>
+                </div>
+                <div class="quote-box">
+                    <h3>Get Your Free Quote Today!</h3>
+                    <p>Call now and speak directly with us</p>
+                    <a href="tel:063 559 5343">063 559 5343</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Excellent service! They fixed our burst pipe within 30 minutes. Highly recommend!"</p>
+                    <div class="testimonial-author">— Sarah M., Illovo</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Professional and reliable. Fair pricing and quality work every time."</p>
+                    <div class="testimonial-author">— Thabo K., Sandton</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Illovo Plumbers</strong></p>
+                <p>📍 123 Main Road, Illovo, Johannesburg</p>
+                <p>📞 <a href="tel:063 559 5343">063 559 5343</a></p>
+                <p>💬 <a href="https://wa.me/27635595343">WhatsApp</a></p>
+            </div>
+            <div class="cta-container">
+                <a href="tel:063 559 5343" class="cta-btn cta-phone">Call Now</a>
+                <a href="https://wa.me/27635595343" class="cta-btn cta-whatsapp">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Illovo Plumbers. All rights reserved.</p>
+            <p style="margin-top: 8px; opacity: 0.6;">Professional plumbers in Illovo, Johannesburg</p>
+        </div>
+    </footer>
+</body>
+</html>
